@@ -8,16 +8,16 @@ stages:
   - build
   - test
 
-build_job:
+build:
   stage: build
   tags:
     - netology
   script:
     - echo "Начало Building"
     - mkdir -p build
-    - echo "Информация о сборке" > build/info.txt
+    - touch build/info.txt
 
-test_job:
+test:
   stage: test
   tags:
     - netology
